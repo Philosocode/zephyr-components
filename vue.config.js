@@ -7,6 +7,7 @@ module.exports = {
           @import "~@/scss/_colors.scss";
           @import "~@/scss/_fonts.scss";
           @import "~@/scss/_respond.scss";
+          @import "~@/scss/_spacing.scss";
         `
       }
     }

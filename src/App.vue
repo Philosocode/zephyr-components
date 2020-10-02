@@ -1,14 +1,14 @@
 <template>
-  <div></div>
+  <Header />
 </template>
 
 <script>
-// import HelloWorld from "./components/HelloWorld"
+import Header from "@/components/nav/Header"
 
 export default {
   name: "App",
   components: {
-    // HelloWorld
+    Header
   }
 }
 </script>
