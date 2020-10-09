@@ -3,37 +3,31 @@
     <Grid>
       <div class="header__content">
         <a class="logo" href="#">Zephyr Components</a>
-        <nav class="nav">
-          <ul class="nav__list">
-            <li
-              class="nav__item"
-              v-for="navLink in navLinks"
-              :key="navLink.name"
-            >
-              <a class="nav__link" href="{{ navLink.path }}">{{
-                navLink.name
-              }}</a>
-            </li>
-          </ul>
-        </nav>
+        <NavList :navLinks="navLinks" />
+        <MenuFull />
       </div>
     </Grid>
   </header>
 </template>
 
 <script>
+// Get screen width: https://stackoverflow.com/a/63944126
+import MenuFull from "@/components/nav/MenuFull"
 import Grid from "@/components/grid/Grid"
+import NavList from "@/components/nav/NavList"
+
+import { navLinks } from "@/shared/navLinks"
 
 export default {
   name: "Header",
-  components: { Grid },
+  components: {
+    MenuFull,
+    NavList,
+    Grid
+  },
   data() {
     return {
-      navLinks: [
-        { path: "/", name: "Home" },
-        { path: "/about", name: "About" },
-        { path: "/contact", name: "Contact" }
-      ]
+      navLinks
     }
   }
 }
@@ -42,7 +36,6 @@ export default {
 <style lang="scss" scoped>
 .header {
   border-bottom: 1px solid $color-grey-lightest;
-  display: none;
   padding: $spacing-small 0;
 
   &__content {
@@ -52,10 +45,6 @@ export default {
 
     grid-column: 2 / -2;
   }
-
-  @include respond(tab-land) {
-    display: block;
-  }
 }
 
 .logo {
@@ -63,34 +52,9 @@ export default {
   font-size: $font-size-medium;
   font-weight: bold;
   text-decoration: none;
-}
 
-.nav {
-  &__list {
-    display: flex;
-    justify-content: center;
-
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-  }
-
-  &__item {
-    font-weight: bold;
-    margin-right: $spacing-medium;
-
-    &:last-child {
-      margin-right: 0;
-    }
-  }
-
-  &__link {
-    color: $color-off-black;
-    text-decoration: none;
-
-    &:hover {
-      color: $color-green;
-    }
+  &:hover {
+    color: $color-green;
   }
 }
 </style>

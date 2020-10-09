@@ -1,14 +1,26 @@
 <template>
   <Header />
+  <main>
+    <FlipCards />
+  </main>
+  <!-- <FooterStacked /> -->
+  <FooterLong />
 </template>
 
 <script>
+import FlipCards from "@/components/cards/FlipCards"
 import Header from "@/components/nav/Header"
+
+// import FooterStacked from "@/components/nav/FooterStacked"
+import FooterLong from "@/components/nav/FooterLong"
 
 export default {
   name: "App",
   components: {
-    Header
+    FlipCards,
+    Header,
+    // FooterStacked,
+    FooterLong
   }
 }
 </script>
@@ -32,7 +44,19 @@ body {
   font-family: $font-primary;
   font-size: 1.6rem;
   line-height: 1.5;
+  position: relative;
+  min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s ease-in-out;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
 }
 </style>
