@@ -36,6 +36,7 @@ export default {
 <style lang="scss" scoped>
 .header {
   border-bottom: 1px solid $color-grey-lightest;
+  box-shadow: $box-shadow-light;
   padding: $spacing-small 0;
 
   &__content {

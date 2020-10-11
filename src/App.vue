@@ -1,23 +1,31 @@
 <template>
   <Header />
   <main>
-    <FlipCards />
+    <Grid>
+      <!-- <FlipCards /> -->
+      <Buttons />
+    </Grid>
   </main>
-  <!-- <FooterStacked /> -->
+  <FooterStacked />
   <FooterLong />
 </template>
 
 <script>
-import FlipCards from "@/components/cards/FlipCards"
+import Buttons from "@/components/buttons/Buttons"
+import ButtonRippleInner from "@/components/buttons/ButtonRippleInner"
+// import FlipCards from "@/components/cards/FlipCards"
 import Header from "@/components/nav/Header"
-
+import Grid from "@/components/grid/Grid"
 // import FooterStacked from "@/components/nav/FooterStacked"
 import FooterLong from "@/components/nav/FooterLong"
 
 export default {
   name: "App",
   components: {
-    FlipCards,
+    ButtonRippleInner,
+    Buttons,
+    // FlipCards,
+    Grid,
     Header,
     // FooterStacked,
     FooterLong
