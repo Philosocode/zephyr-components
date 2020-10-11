@@ -10,7 +10,9 @@
       <ButtonRippleSpread color="black">Ripple Spread</ButtonRippleSpread>
       <ButtonRippleSpread color="green">Ripple Spread</ButtonRippleSpread>
 
-      <ButtonRippleInner>Ripple Inner</ButtonRippleInner>
+      <ButtonRippleInner color="rgba(0,178,125,0.3)"
+        >Ripple Inner</ButtonRippleInner
+      >
     </div>
   </div>
 </template>
@@ -65,7 +67,8 @@ h1 {
     box-shadow: $box-shadow-default;
   }
 
-  &:active, &:focus {
+  &:active,
+  &:focus {
     transform: translateY(-2px);
     box-shadow: $box-shadow-pressed;
     outline: none;

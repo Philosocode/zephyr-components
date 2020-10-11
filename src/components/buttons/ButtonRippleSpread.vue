@@ -56,7 +56,7 @@ export default {
   // Ripple styles
   &:after {
     content: "";
-    // display: inline-block;
+    display: inline-block;
     height: 100%;
 
     position: absolute;

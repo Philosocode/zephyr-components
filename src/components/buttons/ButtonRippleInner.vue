@@ -57,6 +57,9 @@ export default {
   watch: {
     ripples: {
       handler() {
+        console.log("CALLED")
+        if (this.timer) clearTimeout(this.timer)
+
         this.timer = setTimeout(() => {
           this.cleanUp()
         }, 2000)
@@ -90,6 +93,7 @@ export default {
     display: inline-block;
     position: absolute;
     transform: scale(0);
+    pointer-events: none;
   }
 
   @keyframes ripple {
