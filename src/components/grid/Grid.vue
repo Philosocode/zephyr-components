@@ -13,6 +13,7 @@ export default {
 <style lang="scss" scoped>
 .grid {
   display: grid;
-    grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(12, 1fr);
+  row-gap: $spacing-large;
 }
 </style>

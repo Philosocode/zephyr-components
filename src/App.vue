@@ -3,7 +3,8 @@
   <main>
     <Grid>
       <!-- <FlipCards /> -->
-      <Buttons />
+      <!-- <Buttons /> -->
+      <MediaObjects />
     </Grid>
   </main>
   <FooterStacked />
@@ -16,6 +17,7 @@ import ButtonRippleInner from "@/components/buttons/ButtonRippleInner"
 // import FlipCards from "@/components/cards/FlipCards"
 import Header from "@/components/nav/Header"
 import Grid from "@/components/grid/Grid"
+import MediaObjects from "@/components/media/MediaObjects"
 // import FooterStacked from "@/components/nav/FooterStacked"
 import FooterLong from "@/components/nav/FooterLong"
 
@@ -27,6 +29,7 @@ export default {
     // FlipCards,
     Grid,
     Header,
+    MediaObjects,
     // FooterStacked,
     FooterLong
   }

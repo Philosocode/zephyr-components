@@ -10,9 +10,9 @@
       <ButtonRippleSpread color="black">Ripple Spread</ButtonRippleSpread>
       <ButtonRippleSpread color="green">Ripple Spread</ButtonRippleSpread>
 
-      <ButtonRippleInner color="rgba(0,178,125,0.3)"
-        >Ripple Inner</ButtonRippleInner
-      >
+      <ButtonRippleInner color="rgba(0,178,125,0.3)">
+        Ripple Inner
+      </ButtonRippleInner>
     </div>
   </div>
 </template>
@@ -25,7 +25,7 @@ export default {
   name: "Buttons",
   components: {
     ButtonRippleSpread,
-    ButtonRippleInner
+    ButtonRippleInner,
   }
 }
 </script>

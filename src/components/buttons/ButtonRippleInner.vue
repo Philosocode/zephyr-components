@@ -13,6 +13,8 @@
 </template>
 
 <script>
+// Credit: https://codepen.io/WinterCore/pen/aLBzJq
+// Credit: https://github.com/vtranduc
 export default {
   props: {
     color: {
