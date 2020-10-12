@@ -41,12 +41,6 @@ export default {
 footer {
   border-top: 1px solid $color-grey-light;
   padding: 1rem;
-
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
-
   text-align: center;
 }
 

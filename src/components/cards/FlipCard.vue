@@ -25,7 +25,9 @@
 </template>
 
 <script>
-export default {}
+export default {
+  name: "Flip Card"
+}
 </script>
 
 <style lang="scss" scoped>
@@ -84,17 +86,18 @@ $card-height: 40rem;
     flex-direction: column;
     justify-content: flex-start;
 
-    @include respond(tab-land) {
-      margin: 0 4rem;
-      position: static;
-    }
+    // @include respond(tab-land) {
+    //   margin: 0 4rem;
+    //   position: static;
+    // }
 
-    @include respond(tab-port) {
-      margin: 0 2rem;
-    }
-    @include respond(phone) {
-      margin: 0;
-    }
+    // @include respond(tab-port) {
+    //   margin: 0 2rem;
+    // }
+
+    // @include respond(phone) {
+    //   margin: 0;
+    // }
 
     // Use min-* to make sure the cards don't get scrunched up
     // Size of each card face is determined by .flip-card height & width
@@ -103,23 +106,23 @@ $card-height: 40rem;
       min-height: 100%;
       min-width: 100%;
 
-      @include respond(phone) {
-        min-height: 50%;
-      }
+      // @include respond(phone) {
+      //   min-height: 50%;
+      // }
     }
 
     &--front {
       background-color: $color-off-white;
       color: $color-off-black;
 
-      @include respond(tab-land) {
-        transform: rotateY(0);
-      }
+      // @include respond(tab-land) {
+      //   transform: rotateY(0);
+      // }
 
-      @include respond(phone) {
-        position: relative;
-        left: -2rem;
-      }
+      // @include respond(phone) {
+      //   position: relative;
+      //   left: -2rem;
+      // }
     }
 
     &--back {
@@ -127,15 +130,15 @@ $card-height: 40rem;
       color: $color-grey-lightest;
       transform: rotateY(180deg);
 
-      @include respond(tab-land) {
-        transform: rotateY(0);
-      }
+      // @include respond(tab-land) {
+      //   transform: rotateY(0);
+      // }
 
-      @include respond(phone) {
-        margin-top: 2.5rem;
-        position: relative;
-        left: 2rem;
-      }
+      // @include respond(phone) {
+      //   margin-top: 2.5rem;
+      //   position: relative;
+      //   left: 2rem;
+      // }
     }
   }
 
@@ -143,17 +146,17 @@ $card-height: 40rem;
     &--front {
       transform: rotateY(-180deg) translateY(-0.5rem);
 
-      @include respond(tab-land) {
-        transform: none;
-      }
+      // @include respond(tab-land) {
+      //   transform: none;
+      // }
     }
 
     &--back {
       transform: rotateY(0) translateY(-0.5rem);
 
-      @include respond(tab-land) {
-        transform: none;
-      }
+      // @include respond(tab-land) {
+      //   transform: none;
+      // }
     }
   }
 
@@ -213,15 +216,15 @@ $card-height: 40rem;
     max-width: 22rem;
     transform: translateY(8rem);
 
-    @include respond(tab-port) {
-      max-width: 21rem;
-      transform: translateY(5.7rem);
-    }
+    // @include respond(tab-port) {
+    //   max-width: 21rem;
+    //   transform: translateY(5.7rem);
+    // }
 
-    @include respond(phone) {
-      max-width: 18rem;
-      transform: translateY(4rem);
-    }
+    // @include respond(phone) {
+    //   max-width: 18rem;
+    //   transform: translateY(4rem);
+    // }
   }
 }
 </style>

@@ -1,21 +1,25 @@
 <template>
-  <Header />
-  <main>
-    <Grid>
-      <!-- <FlipCards /> -->
-      <!-- <Buttons /> -->
-      <MediaObjects />
-    </Grid>
-  </main>
-  <FooterStacked />
-  <FooterLong />
+  <div class="site-container">
+    <Header />
+    <main class="page-container">
+      <Grid>
+        <FlipCards />
+        <!-- <Buttons /> -->
+        <!-- <MediaObjects /> -->
+        <!-- <ImageDarkOverlay /> -->
+      </Grid>
+    </main>
+    <!-- <FooterStacked /> -->
+    <FooterLong />
+  </div>
 </template>
 
 <script>
 import Buttons from "@/components/buttons/Buttons"
 import ButtonRippleInner from "@/components/buttons/ButtonRippleInner"
-// import FlipCards from "@/components/cards/FlipCards"
+import FlipCards from "@/components/cards/FlipCards"
 import Header from "@/components/nav/Header"
+import ImageDarkOverlay from "@/components/image/ImageDarkOverlay"
 import Grid from "@/components/grid/Grid"
 import MediaObjects from "@/components/media/MediaObjects"
 // import FooterStacked from "@/components/nav/FooterStacked"
@@ -26,8 +30,9 @@ export default {
   components: {
     ButtonRippleInner,
     Buttons,
-    // FlipCards,
+    FlipCards,
     Grid,
+    ImageDarkOverlay,
     Header,
     MediaObjects,
     // FooterStacked,
@@ -55,10 +60,19 @@ body {
   font-family: $font-primary;
   font-size: 1.6rem;
   line-height: 1.5;
-  position: relative;
-  min-height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.site-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page-container {
+  margin-top: $spacing-large;
+  margin-bottom: $spacing-larger;
 }
 
 .fade-enter-active,
