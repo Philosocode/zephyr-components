@@ -3,10 +3,12 @@
     <Header />
     <main class="page-container">
       <Grid>
-        <FlipCards />
+        <FormBorderless />
         <!-- <Buttons /> -->
-        <!-- <MediaObjects /> -->
+        <!-- <FlipCards /> -->
+
         <!-- <ImageDarkOverlay /> -->
+        <!-- <MediaObjects /> -->
       </Grid>
     </main>
     <!-- <FooterStacked /> -->
@@ -17,6 +19,7 @@
 <script>
 import Buttons from "@/components/buttons/Buttons"
 import ButtonRippleInner from "@/components/buttons/ButtonRippleInner"
+import FormBorderless from "@/components/forms/FormBorderless"
 import FlipCards from "@/components/cards/FlipCards"
 import Header from "@/components/nav/Header"
 import ImageDarkOverlay from "@/components/image/ImageDarkOverlay"
@@ -30,6 +33,7 @@ export default {
   components: {
     ButtonRippleInner,
     Buttons,
+    FormBorderless,
     FlipCards,
     Grid,
     ImageDarkOverlay,

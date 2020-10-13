@@ -31,3 +31,7 @@ $color-red-lighter: #FF8A8A;
 $color-red-lightest: #FFA4A4;
 $color-red-dark: #D23E3E;
 $color-red-darker: #B82424;
+
+// Gradients
+$gradient-red: linear-gradient(to right, $color-red-light, $color-red-dark);
+$gradient-green: linear-gradient(to right, $color-green-light, $color-green-dark);
